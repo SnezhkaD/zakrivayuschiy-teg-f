@@ -391,14 +391,6 @@
   fill: var(--sparks-color);
 }
 
-.like-icon.is-liked  {
- animation: size 0.3s ease-in 0.1s 1 alternate;
-}
-
-.like-icon.is-liked .sparks {
-  animation: flicker 0.3s ease-in 0.3s 1 alternate;
-}
-
 .button__save {
   width: clamp(306px, 23.47vw, 338px);
   height: 55px;
