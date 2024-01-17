@@ -18,7 +18,53 @@
  }
  
 .like-icon.is-liked .sparks {
-   animation: flicker 0.3s ease-in 0.3s 1 alternate;
+  animation: flicker 0.3s ease-in 0.3s 1 alternate;
+}
+
+.like-icon .heart {
+  transition: fill 0.1s;
+}
+
+.like-icon .contour {
+  fill: var(--accent-color);
+}
+
+.like-icon .core {
+  fill: var(--page-background);
+}
+
+.like-icon .main-body {
+  fill: var(--background-color);
+}
+
+.like-icon:hover .core {
+  fill: var(--accent-color);
+  transition: fill 0.3s linear;
+}
+
+.like-icon:hover .main-body {
+  fill: var(--accent-color);
+  transition: fill 0.3s linear 0.05s;
+}
+
+.like-icon:active .core {
+  fill: var(--sparks-color);
+}
+
+.like-icon:active .main-body {
+  fill: var(--sparks-color);
+}
+
+.like-icon.is-liked .core {
+  fill: var(--sparks-color);
+}
+
+.like-icon.is-liked .main-body {
+  fill: var(--sparks-color);
+}
+
+.like-icon.is-liked .contour {
+  fill: var(--sparks-color);
 }
 
 @keyframes arrow {

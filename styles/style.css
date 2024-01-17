@@ -19,17 +19,16 @@
   min-block-size: 100dvb;
   background-color: var(--background-color);
   color: var(--accent-color);
-  font-family: var(--font-family) 'Arial',  sans-serif;
-  font-variation-settings: 'wght' var(--wght);
+  font-family: var(--font-family), "Arial", sans-serif;
+  font-variation-settings: "wght" var(--wght);
   background-image: var(--background-image);
   background-attachment: fixed;
   background-size: cover;
-}  
+}
 
 /*шапка*/
 .header {
   width: clamp(375px, 49vw, 700px);
-  height: clamp(326px, 42.5vh, 368px);
   margin: 102px auto 0;
   background-color: var(--background-color);
   border: var(--border);
@@ -37,17 +36,17 @@
 
 .header__title {
   color: var(--color);
-  font-family: var(--accent-font-family);
+  font-family: var(--accent-font-family), "Arial", sans-serif;
   font-size: clamp(49px, 4.51vw, 65px);
   font-style: normal;
   font-weight: var(--wgth);
   line-height: normal;
   text-transform: uppercase;
-}   
+}
 
 .header__text {
   color: var(--color);
-  font-family: var(--accent-font-family);
+  font-family: var(--accent-font-family), "Arial", sans-serif;
   font-size: clamp(14px, 1.6vw, 23px);
   font-style: normal;
   font-weight: var(--wgth);
@@ -66,13 +65,12 @@
 .header__theme-menu {
   display: flex;
   flex-direction: column;
-  margin-block-start: 24px;
-  margin-inline-start: clamp(150px, 21.5vw, 315px);
+  margin: 23px 0 19px clamp(149px, 21.5vw, 310px);
 }
 
 .theme-menu__button {
   color: var(--color);
-  font-family: var(--accent-font-family);
+  font-family: var(--accent-font-family), "Arial", sans-serif;
   font-size: 14px;
   font-style: normal;
   font-weight: var(--wgth);
@@ -85,18 +83,24 @@
 }
 
 .theme-menu__button:disabled:before {
-  content: '▶';
+  content: "▶";
   position: absolute;
   margin-inline-start: -20px;
   animation: arrow 0.5s ease-in-out alternate infinite;
 }
 
 .theme-menu__item:not(:last-child) {
-  margin-block-end: 8px;
+  margin-block-end: 7px;
 }
 
-.theme-menu__button:hover,
-.theme-menu__button:active,
+.theme-menu__button:hover {
+  opacity: 0.6;
+}
+
+.theme-menu__button:active {
+  opacity: 0.6;
+}
+
 .theme-menu__button:focus-visible {
   opacity: 0.6;
 }
@@ -112,9 +116,9 @@
 }
 
 .theme-menu__button::after {
-  content: '';
+  content: "";
   display: block;
-  width: 0%;
+  width: 0;
   height: 2px;
   margin-block-start: 2px;
   background-color: var(--accent-color);
@@ -124,7 +128,7 @@
 
 .theme-menu__button:focus-visible::after {
   width: 100%;
-} 
+}
 
 /*секция карточек*/
 .main {
@@ -145,7 +149,7 @@
   border: 2px solid var(--color);
 }
 
-.card__list-item {
+.card__list-images {
   object-fit: cover;
   object-position: center;
   width: clamp(371px, 48.33vw, 696px);
@@ -156,7 +160,7 @@
 
 .card-title {
   color: var(--accent-color);
-  font-family: var(--font-family);
+  font-family: var(--font-family), "Arial", sans-serif;
   font-size: 18px;
   font-style: normal;
   font-weight: var(--wgth-title);
@@ -170,7 +174,7 @@
 
 .card-text {
   color: var(--accent-color);
-  font-family: var(--font-family);
+  font-family: var(--font-family), "Arial", sans-serif;
   font-size: 18px;
   font-style: normal;
   font-weight: var(--wgth);
@@ -187,42 +191,42 @@
 .card__label {
   position: absolute;
   color: var(--accent-color);
-  font-family: var(--accent-font-family);
+  font-family: var(--accent-font-family), "Arial", sans-serif;
   font-size: 14px;
   font-style: normal;
   font-weight: var(--wgth);
   line-height: normal;
   text-transform: uppercase;
-  top: 25px;
+  top: 28px;
   right: clamp(11px, 1.74vw, 25px);
   opacity: 0.5;
   mix-blend-mode: hard-light;
-  text-shadow:
-    -1px 0 var(--background-color), 
-    0 1px var(--background-color), 
-    1px 0 var(--background-color), 
-    0 -1px var(--background-color);
+  text-shadow: -1px 0 var(--background-color), 0 1px var(--background-color),
+    1px 0 var(--background-color), 0 -1px var(--background-color);
   z-index: 1;
 }
 
-@supports((text-stroke: 1px var(--background-color)) or (-webkit-text-stroke: 1px var(--background-color))) {
+@supports (
+  (text-stroke: 1px var(--background-color)) or
+    (-webkit-text-stroke: 1px var(--background-color))
+) {
   card__label {
-      -webkit-text-stroke: 1px var(--background-color);
-      text-stroke: 1px var(--background-color);
-      text-shadow: none;
+    -webkit-text-stroke: 1px var(--background-color);
+    text-stroke: 1px var(--background-color);
+    text-shadow: none;
   }
-} 
+}
 
 /*фильтры*/
 .card-start {
   -webkit-filter: saturate(120%);
   filter: saturate(120%);
-} 
+}
 
 .card-diving {
   -webkit-filter: sepia(10%);
   filter: sepia(10%);
-} 
+}
 
 .card-lighting {
   -webkit-filter: brightness(95%);
@@ -250,8 +254,8 @@
 }
 
 .card-janosch {
-  -webkit-filter: ;
-  filter: grayscale(50%) contrast(110%) saturate(150%);;
+  -webkit-filter: grayscale(50%) contrast(110%) saturate(150%);
+  filter: grayscale(50%) contrast(110%) saturate(150%);
 }
 
 /*кнопка*/
@@ -266,7 +270,7 @@
 
 .card__like-button {
   border: none;
-  background:transparent;
+  background: transparent;
   min-width: 130px;
   height: 38px;
   padding: 9px 17px;
@@ -281,7 +285,7 @@
 
 .button:focus-visible {
   box-shadow: 2px 2px 0 var(--accent-color);
-  transition: 0.3s; 
+  transition: box-shadow 0.3s;
 }
 
 .button::before {
@@ -303,18 +307,18 @@
 }
 
 .button__text {
-  font-family: var(--accent-font-family);
+  font-family: var(--accent-font-family), "Arial", sans-serif;
   font-size: 14px;
   font-style: normal;
   font-weight: var(--wgth);
   line-height: 90%;
   z-index: 2;
   mix-blend-mode: difference;
-  color:var(--mix-button-color);
+  color: var(--mix-button-color);
 }
 
 .card__like-button:hover {
- color: var(--button-text-color);
+  color: var(--button-text-color);
 }
 
 .card__button {
@@ -340,59 +344,28 @@
 
 .card__icon-button:focus-visible {
   outline: 2px solid var(--accent-color);
-  transition: 0.3s ease;
-}
-
-.sparks {
-  opacity: 0;
+  transition: outline 0.3s ease;
 }
 
 .like-icon  {
   padding-block-start: 3px;
 }
 
-.like-icon .heart {
-  transition: fill 0.1s;
+.sparks {
+  opacity: 0;
 }
 
-.like-icon .main-body {
- transition: fill 0.3s 0.05s linear;
-}
-
-.like-icon .core {
-  transition: fill 0.3s 0.03s linear;
-}
-
-.like-icon:hover .core {
-  fill: var(--accent-color);
-}
-
-.like-icon:hover .main-body {
-  fill: var(--accent-color);
-}
-
-.like-icon:active .core {
-  fill: var(--sparks-color);
-}
-
-.like-icon:active .main-body {
-  fill: var(--sparks-color);
-}
-
-.like-icon.is-liked .core {
-  fill: var(--sparks-color);
-}
-
-.like-icon.is-liked .main-body {
-  fill: var(--sparks-color);
-}
-
-.like-icon.is-liked .contour {
-  fill: var(--sparks-color);
+/*footer*/
+.footer {
+ height: 55px;
+ position: relative;
+ display: flex;
+ align-items: center;
+ justify-content: center;
 }
 
 .button__save {
-  width: clamp(306px, 23.47vw, 338px);
+  width: clamp(309px, 23.47vw, 338px);
   height: 55px;
   align-items: center;
   gap: 8px;
@@ -401,11 +374,19 @@
   background: var(--background-color);
   padding: 15px 20px;
   text-wrap: nowrap;
+  position: absolute;
+  top: 50px;
+ }
+
+ @media (width <= 375px) {
+  .footer {
+    height: 84px;
+   }
 }
 
 @media (width < 1440px) {
   .button__save {
-    height: 80px;
+    height: 84px;
     flex-direction: column;
   }
 }
@@ -416,18 +397,20 @@
 }
 
 .svg-disk:hover {
-    fill: var(--background-color);
+  fill: var(--background-color);
 }
 
 /*dialog*/
 .modal-text {
   color: var(--accent-color);
-  font-family: var(--accent-font-family);
+  font-family: var(--accent-font-family), "Arial", sans-serif;
   font-size: 14px;
   font-style: normal;
   font-weight: var(--wgth);
   line-height: 150%;
   text-transform: uppercase;
+  max-width: clamp(198px, 16.25vw, 234px);
+  width: 100%;
 }
 
 .dialog-content {
@@ -458,18 +441,13 @@
 .dialog-window {
   border: 2px solid var(--accent-color);
   background: var(--background-color);
+  position: fixed;
+  inset: 0;
 }
 
 .dialog-window:not([open]) {
   pointer-events: none;
   opacity: 0;
-}
-
-.dialog-window {
-  position: fixed;
-  inset: 0;
-  right: -2.5px;
-  top: -1.5px;
 }
 
 .dialog-window::backdrop {
