@@ -586,41 +586,41 @@
         </article>
       </section>
     </main>
-      <footer class="footer">
-        <button
-          class="button button__save"
-          type="button"
-          onclick="window['dialog-id'].showModal()"
-          aria-controls="dialog-id"
-        >
-          <svg class="svg-disk">
+    <footer class="footer">
+      <button
+        class="button button__save"
+        type="button"
+        onclick="window['dialog-id'].showModal()"
+        aria-controls="dialog-id"
+      >
+        <svg class="svg-disk">
+          <use
+            xlink:href="#disk"
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+          ></use>
+        </svg>
+        <span class="button__text">Сохранить на память</span>
+      </button>
+      <dialog id="dialog-id" class="dialog-window">
+        <div class="dialog-content">
+          <svg class="svg-disk svg-disk-dialog">
             <use
               xlink:href="#disk"
               xmlns:xlink="http://www.w3.org/1999/xlink"
             ></use>
           </svg>
-          <span class="button__text">Сохранить на память</span>
+          <p class="modal-text">Вставьте дискету, чтобы продолжить</p>
+        </div>
+        <button
+          class="button button-modal"
+          type="submit"
+          onclick="window['dialog-id'].close()"
+          aria-controls="dialog-id"
+        >
+          <span class="button__text">ok</span>
         </button>
-        <dialog id="dialog-id" class="dialog-window">
-          <div class="dialog-content">
-            <svg class="svg-disk svg-disk-dialog">
-              <use
-                xlink:href="#disk"
-                xmlns:xlink="http://www.w3.org/1999/xlink"
-              ></use>
-            </svg>
-            <p class="modal-text">Вставьте дискету, чтобы продолжить</p>
-          </div>
-          <button
-            class="button button-modal"
-            type="submit"
-            onclick="window['dialog-id'].close()"
-            aria-controls="dialog-id"
-          >
-            <span class="button__text">ok</span>
-          </button>
-        </dialog>
-      </footer>
+      </dialog>
+    </footer>
     <script src="./scripts/like.js"></script>
   </body>
 </html>
